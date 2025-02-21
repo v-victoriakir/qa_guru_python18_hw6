@@ -6,10 +6,12 @@ def test_dark_theme_by_time():
     Протестируйте правильность переключения темной темы на сайте в зависимости от времени
     """
     current_time = time(hour=23)
-    is_dark_theme = True
+    is_dark_theme = None
 
     if 22 <= current_time.hour or current_time.hour <= 6:
         is_dark_theme = True
+    else:
+        is_dark_theme = False
     assert is_dark_theme is True
 
 
